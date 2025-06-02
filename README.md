@@ -14,12 +14,12 @@ Choose your shell:
 
 #### **Bash**  
 ```bash
-curl -o ~/.dotnet_build_functions.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.bash
+curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash
 ```
 
 #### **Zsh**  
 ```bash
-curl -o ~/.dotnet_build_functions.zsh https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.zsh
+curl -o ~/.dotnet_build_functions.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh
 ```
 
 ---

@@ -41,7 +41,7 @@ echo "\nsource ~/.dotnet_delta_build.zsh" >> ~/.zshrc
 source ~/.dotnet_delta_build.zsh
 ``` -->
 
-### ** 3. Reload Shell** 
+### **3. Reload Shell** 
 #### **Bash**
 ```bash
 echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.bashrc

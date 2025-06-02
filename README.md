@@ -9,6 +9,24 @@
 
 ## 🔧 Installation  
 
+
+### Quick Installation
+
+#### **Bash**
+```bash
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash &&
+echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.bashrc &&
+source ~/.bashrc
+```
+
+#### **Zsh**
+```bash
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
+echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.zshrc &&
+source ~/.zshrc
+```
+### **Detailed Installation**
+
 ### **1. Download the Script**  
 Choose your shell:  
 
@@ -54,23 +72,6 @@ echo "\nsource ~/.dotnet_delta_build.zsh" >> ~/.zshrc
 source ~/.bashrc  # Bash
 source ~/.zshrc   # Zsh
 ```-->
-
-### Quick Installation
-
-#### **Bash**
-```bash
-curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash &&
-echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.bashrc &&
-source ~/.bashrc
-```
-
-#### **Zsh**
-```bash
-curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
-echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.zshrc &&
-source ~/.zshrc
-```
-
 
 ---
 

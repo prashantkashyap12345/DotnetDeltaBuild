@@ -10,11 +10,10 @@ Choose the correct version for your shell:
 
 For Zsh Users
 bash
-curl -o ~/.dotnet_build_functions.zsh https://gist.githubusercontent.com/yourusername/yourgistid/raw/dotnet_build_functions.zsh
+curl -o ~/.dotnet_build_functions.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_build_functions.zsh
 For Bash Users
 bash
-curl -o ~/.dotnet_build_functions.bash https://gist.githubusercontent.com/yourusername/yourgistid/raw/dotnet_build_functions.bash
-(Replace the URL with the actual raw link if hosting these scripts elsewhere.)
+curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_build_functions.bash
 
 2. Add to Your Shell Configuration
 Zsh (macOS/Linux)

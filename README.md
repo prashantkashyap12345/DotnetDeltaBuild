@@ -55,7 +55,7 @@ source ~/.bashrc  # Bash
 source ~/.zshrc   # Zsh
 ```-->
 
-### Quick Commands
+### Quick Installation
 
 #### **Bash**
 ```bash

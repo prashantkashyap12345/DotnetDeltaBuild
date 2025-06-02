@@ -32,10 +32,13 @@ source ~/.dotnet_build_functions.bash
 
 #### **Zsh** (`~/.zshrc`)  
 ```bash
-source ~/.dotnet_build_functions.zsh
+echo "source ~/.dotnet_build_functions.zsh" >> ~/.zshrc
 ```
+<!--```bash
+source ~/.dotnet_build_functions.zsh
+``` -->
 
-#### **Reload Shell**  
+#### ** 3. Reload Shell**  
 ```bash
 source ~/.bashrc  # Bash
 source ~/.zshrc   # Zsh

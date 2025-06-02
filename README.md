@@ -1,109 +1,135 @@
-# DotnetDeltaBuild
-Git-Aware .NET Build Tools Setup Guide
-For Bash & Zsh Users
+# DotnetDeltaBuild 🚀  
+**A Git-aware .NET build tool that compiles only projects with unpushed changes**  
+*(Save time by skipping unchanged projects!)*  
 
-These scripts (dnbgc, dnbgcq, and dnbgc-dry) help you build only the .NET projects with unpushed Git changes (committed, staged, or unstaged). This saves time by avoiding unnecessary rebuilds.
+![GitHub license](https://img.shields.io/badge/platform-bash%20%7C%20zsh-blue)  
+![Demo](https://github.com/prashantkashyap12345/DotnetDeltaBuild/raw/main/assets/demo.gif) *(Example GIF placeholder)*  
 
-📥 Installation Instructions
-1. Download the Scripts
-Choose the correct version for your shell:
+---
 
-For Zsh Users
-bash
-curl -o ~/.dotnet_build_functions.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_build_functions.zsh
-For Bash Users
-bash
-curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_build_functions.bash
+## 🔧 Installation  
 
-2. Add to Your Shell Configuration
-Zsh (macOS/Linux)
-Open ~/.zshrc and add:
+### **1. Download the Script**  
+Choose your shell:  
 
-bash
-source ~/.dotnet_build_functions.zsh
-Bash (macOS/Linux)
-Open ~/.bashrc (or ~/.bash_profile on macOS) and add:
+#### **Bash**  
+```bash
+curl -o ~/.dotnet_build_functions.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.bash
+```
 
-bash
+#### **Zsh**  
+```bash
+curl -o ~/.dotnet_build_functions.zsh https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.zsh
+```
+
+---
+
+### **2. Add to Shell Config**  
+#### **Bash** (`~/.bashrc` or `~/.bash_profile`)  
+```bash
 source ~/.dotnet_build_functions.bash
-Apply Changes
-Reload your shell:
+```
 
-bash
-source ~/.zshrc  # For Zsh
-# OR
-source ~/.bashrc  # For Bash
-🛠️ Available Commands
-Command	Description
-dnbgc	Builds all projects with unpushed changes (verbose output)
-dnbgcq	Quiet mode (minimal output, faster)
-dnbgc-dry	Dry-run (shows which projects would be built)
-🚀 Usage Examples
-1. Build All Changed Projects
-bash
+#### **Zsh** (`~/.zshrc`)  
+```bash
+source ~/.dotnet_build_functions.zsh
+```
+
+#### **Reload Shell**  
+```bash
+source ~/.bashrc  # Bash
+source ~/.zshrc   # Zsh
+```
+
+---
+
+## 🛠️ Commands  
+| Command          | Description                              |
+|------------------|------------------------------------------|
+| `dnbgc`          | Builds projects with changes (verbose)   |
+| `dnbgcq`         | Quiet mode (minimal output)              |
+| `dnbgc-dry`      | Dry-run (show what would be built)       |
+
+---
+
+## 🚀 Usage  
+### **1. Build Changed Projects**  
+```bash
 dnbgc
-Output:
-
-🔍 Finding unpushed changes in 'feature/new-endpoint'...
+```
+**Output:**  
+```diff
+🔍 Finding unpushed changes in 'feature/authentication'...
 📝 Changed files:
-  src/API/Controllers/UserController.cs
-  src/Domain/Models/User.cs
+  src/AuthService/Controllers/LoginController.cs
+  src/Core/Models/User.cs
 
-🔨 Building 2 projects with changes:
-  📦 src/API/API.csproj
-  ✅ Success
-  📦 src/Domain/Domain.csproj
-  ✅ Success
+🔨 Building 2 projects:
+  📦 src/AuthService/AuthService.csproj → ✅ Success
+  📦 src/Core/Core.csproj → ✅ Success
+📊 Results: Built 2 projects in 4.2s.
+```
 
-📊 Results:
-  ✅ Built: 2 projects
-  ⏱️  Total time: 5 seconds
-2. Quick Build (Minimal Output)
-bash
+### **2. Quick Build (Silent)**  
+```bash
 dnbgcq
-Output:
+```
+**Output:**  
+```bash
+Building AuthService...✅
+Building Core...✅
+✅ Built 2 projects in 3.8s.
+```
 
-Building API...✅
-Building Domain...✅
-✅ Built 2 projects in ⏱️ 4 seconds.
-3. Check What Would Be Built (Dry Run)
-bash
+### **3. Dry Run**  
+```bash
 dnbgc-dry
-Output:
+```
+**Output:**  
+```bash
+🔍 Projects with unpushed changes:
+  📦 src/AuthService/AuthService.csproj
+  📦 src/Core/Core.csproj
+```
 
-🔍 Projects with unpushed changes in 'feature/new-endpoint':
-  Changed files detected:
-    src/API/Controllers/UserController.cs
-    src/Domain/Models/User.cs
+---
 
-  📦 src/API/API.csproj
-  📦 src/Domain/Domain.csproj
-🔄 Updating the Scripts
-If improvements are made, update them with:
+## 📜 How It Works  
+1. **Detects Changes**: Checks for:  
+   - Unpushed commits  
+   - Staged/unstaged changes  
+2. **Maps to Projects**: Finds `.csproj` files containing changed files.  
+3. **Smart Build**: Skips unaffected projects.  
 
-Zsh
-bash
-curl -o ~/.dotnet_build_functions.zsh https://new-url.zsh
-source ~/.zshrc
-Bash
-bash
-curl -o ~/.dotnet_build_functions.bash https://new-url.bash
-source ~/.bashrc
-⚠️ Troubleshooting
-1. "Command not found" after installation?
-Ensure you sourced your shell config (source ~/.zshrc or source ~/.bashrc).
+---
 
-Check if the file was saved in the correct location (~/.dotnet_build_functions.zsh or ~/.dotnet_build_functions.bash).
+## ⚠️ Troubleshooting  
+| Issue                  | Fix                                      |
+|------------------------|------------------------------------------|
+| `Command not found`    | Verify `source` line in your shell config. |
+| `No .csproj files`     | Run from the solution root directory.     |
+| `Not a Git repo`       | Ensure you’re in a Git repository.        |
 
-2. "Not in a Git repository" error?
-Run the command inside a Git repo.
+---
 
-3. "No .csproj files found"?
-Ensure you’re in the root of a .NET solution.
+## 🤝 Contributing  
+PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).  
 
-🎉 Enjoy Faster Builds!
-These tools help you build only what changed, saving time in large projects.
+---
 
-Let your team know if you find issues or improvements! 🚀
+## 📄 License  
+MIT © [Your Name](https://github.com/prashantkashyap12345)  
 
-Happy Coding! 💻🔥
+---
+
+**🎉 Happy Coding!**  
+*"Build less, ship more!"*  
+
+--- 
+
+### ✨ Enhancements Needed?  
+- Add a real demo GIF under `assets/`.  
+- Include CI/CD examples (GitHub Actions).  
+- Add benchmarks (time saved vs. full rebuild).  
+
+Let me know if you'd like to refine any section!

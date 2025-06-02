@@ -14,12 +14,12 @@ Choose your shell:
 
 #### **Bash**  
 ```bash
-curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash
 ```
 
 #### **Zsh**  
 ```bash
-curl -o ~/.dotnet_build_functions.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh
+curl -o ~/.dotnet_delta_build.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh
 ```
 
 ---
@@ -27,28 +27,28 @@ curl -o ~/.dotnet_build_functions.zsh https://github.com/prashantkashyap12345/Do
 ### **2. Add to Shell Config**  
 #### **Bash** (`~/.bashrc` or `~/.bash_profile`)  
 ```bash
-echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc
+echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.bashrc
 ```
 <!--```bash
-source ~/.dotnet_build_functions.bash
+source ~/.dotnet_delta_build.bash
 ```-->
 
 #### **Zsh** (`~/.zshrc`)  
 ```bash
-echo "\nsource ~/.dotnet_build_functions.zsh" >> ~/.zshrc
+echo "\nsource ~/.dotnet_delta_build.zsh" >> ~/.zshrc
 ```
 <!--```bash
-source ~/.dotnet_build_functions.zsh
+source ~/.dotnet_delta_build.zsh
 ``` -->
 
 ### ** 3. Reload Shell** 
 #### **Bash**
 ```bash
-echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc
+echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.bashrc
 ```
 #### **Zsh**
 ```bash
-echo "\nsource ~/.dotnet_build_functions.zsh" >> ~/.zshrc
+echo "\nsource ~/.dotnet_delta_build.zsh" >> ~/.zshrc
 ``` 
 <!--```bash
 source ~/.bashrc  # Bash
@@ -59,15 +59,15 @@ source ~/.zshrc   # Zsh
 
 #### **Bash**
 ```bash
-curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash &&
-echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc &&
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash &&
+echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.bashrc &&
 source ~/.bashrc
 ```
 
 #### **Zsh**
 ```bash
-curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
-echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.zshrc &&
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
+echo "\nsource ~/.dotnet_delta_build.bash" >> ~/.zshrc &&
 source ~/.zshrc
 ```
 

@@ -27,22 +27,50 @@ curl -o ~/.dotnet_build_functions.zsh https://raw.githubusercontent.com/prashant
 ### **2. Add to Shell Config**  
 #### **Bash** (`~/.bashrc` or `~/.bash_profile`)  
 ```bash
-source ~/.dotnet_build_functions.bash
+echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc
 ```
+<!--```bash
+source ~/.dotnet_build_functions.bash
+```-->
 
 #### **Zsh** (`~/.zshrc`)  
 ```bash
-echo "source ~/.dotnet_build_functions.zsh" >> ~/.zshrc
+echo "\nsource ~/.dotnet_build_functions.zsh" >> ~/.zshrc
 ```
 <!--```bash
 source ~/.dotnet_build_functions.zsh
 ``` -->
 
-#### ** 3. Reload Shell**  
+### ** 3. Reload Shell** 
+#### **Bash**
 ```bash
+echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc
+```
+#### **Zsh**
+```bash
+echo "\nsource ~/.dotnet_build_functions.zsh" >> ~/.zshrc
+``` 
+<!--```bash
 source ~/.bashrc  # Bash
 source ~/.zshrc   # Zsh
+```-->
+
+### Quick Commands
+
+#### **Bash**
+```bash
+curl -o ~/.dotnet_build_functions.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.bash &&
+echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc &&
+source ~/.bashrc
 ```
+
+#### **Zsh**
+```bash
+curl -o ~/.dotnet_build_functions.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.zsh &&
+echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.zshrc &&
+source ~/.zshrc
+```
+
 
 ---
 

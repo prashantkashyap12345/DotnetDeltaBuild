@@ -59,14 +59,14 @@ source ~/.zshrc   # Zsh
 
 #### **Bash**
 ```bash
-curl -o ~/.dotnet_build_functions.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.bash &&
+curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash &&
 echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.bashrc &&
 source ~/.bashrc
 ```
 
 #### **Zsh**
 ```bash
-curl -o ~/.dotnet_build_functions.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/main/dotnet_build_functions.zsh &&
+curl -o ~/.dotnet_build_functions.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
 echo "\nsource ~/.dotnet_build_functions.bash" >> ~/.zshrc &&
 source ~/.zshrc
 ```

@@ -14,14 +14,14 @@
 
 #### **Bash**
 ```bash
-curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash &&
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/raw/refs/heads/main/dotnet_delta_build.bash &&
 echo "source ~/.dotnet_delta_build.bash" >> ~/.bashrc &&
 source ~/.bashrc
 ```
 
 #### **Zsh**
 ```bash
-curl -o ~/.dotnet_delta_build.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
+curl -o ~/.dotnet_delta_build.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/raw/refs/heads/main/dotnet_delta_build.zsh &&
 echo "source ~/.dotnet_delta_build.zsh" >> ~/.zshrc &&
 source ~/.zshrc
 ```
@@ -32,12 +32,12 @@ Choose your shell:
 
 #### **Bash**  
 ```bash
-curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.bash
+curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/raw/refs/heads/main/dotnet_delta_build.bash
 ```
 
 #### **Zsh**  
 ```bash
-curl -o ~/.dotnet_delta_build.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh
+curl -o ~/.dotnet_delta_build.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/raw/refs/heads/main/dotnet_delta_build.zsh
 ```
 
 ---

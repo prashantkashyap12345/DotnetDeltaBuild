@@ -15,14 +15,16 @@
 #### **Bash**
 ```bash
 curl -o ~/.dotnet_delta_build.bash https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/refs/heads/main/dotnet_delta_build.bash &&
-echo "source ~/.dotnet_delta_build.bash" >> ~/.bashrc &&
+echo "
+source ~/.dotnet_delta_build.bash" >> ~/.bashrc &&
 source ~/.bashrc
 ```
 
 #### **Zsh**
 ```bash
 curl -o ~/.dotnet_delta_build.zsh https://raw.githubusercontent.com/prashantkashyap12345/DotnetDeltaBuild/refs/heads/main/dotnet_delta_build.zsh &&
-echo "source ~/.dotnet_delta_build.zsh" >> ~/.zshrc &&
+echo "
+source ~/.dotnet_delta_build.zsh" >> ~/.zshrc &&
 source ~/.zshrc
 ```
 ### **Detailed Installation**
@@ -45,7 +47,8 @@ curl -o ~/.dotnet_delta_build.zsh https://raw.githubusercontent.com/prashantkash
 ### **2. Add to Shell Config**  
 #### **Bash** (`~/.bashrc` or `~/.bash_profile`)  
 ```bash
-echo "source ~/.dotnet_delta_build.bash" >> ~/.bashrc
+echo "
+source ~/.dotnet_delta_build.bash" >> ~/.bashrc
 ```
 <!--```bash
 source ~/.dotnet_delta_build.bash
@@ -53,7 +56,8 @@ source ~/.dotnet_delta_build.bash
 
 #### **Zsh** (`~/.zshrc`)  
 ```bash
-echo "source ~/.dotnet_delta_build.zsh" >> ~/.zshrc
+echo "
+source ~/.dotnet_delta_build.zsh" >> ~/.zshrc
 ```
 <!--```bash
 source ~/.dotnet_delta_build.zsh
@@ -62,11 +66,13 @@ source ~/.dotnet_delta_build.zsh
 ### **3. Reload Shell** 
 #### **Bash**
 ```bash
-echo "source ~/.dotnet_delta_build.bash" >> ~/.bashrc
+echo "
+source ~/.dotnet_delta_build.bash" >> ~/.bashrc
 ```
 #### **Zsh**
 ```bash
-echo "source ~/.dotnet_delta_build.zsh" >> ~/.zshrc
+echo "
+source ~/.dotnet_delta_build.zsh" >> ~/.zshrc
 ``` 
 <!--```bash
 source ~/.bashrc  # Bash

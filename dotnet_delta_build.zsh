@@ -113,6 +113,8 @@ dnbgcq() {
     local current_branch=$(git branch --show-current)
     local remote_branch="origin/$current_branch"
     local repo_root=$(git rev-parse --show-toplevel)
+    local build_errors=()
+    local temp_file=$(mktemp)
 
     # Check if remote branch exists
     if ! git ls-remote --exit-code --heads origin "$current_branch" >/dev/null 2>&1; then
@@ -132,7 +134,7 @@ dnbgcq() {
 
     local all_projects=$(find "$repo_root" -name "*.csproj" -type f)
     local built_count=0
-    local failed=false
+    local failed_count=0
 
     while IFS= read -r project; do
         local project_dir=$(dirname "$project")
@@ -149,21 +151,43 @@ dnbgcq() {
         if [ "$has_changes" = true ]; then
             local project_name=$(basename "$project" .csproj)
             echo -n "Building $project_name..."
-            if dotnet build "$project" >/dev/null 2>&1; then
+            
+            # Redirect all output to temp file
+            dotnet build "$project" > "$temp_file" 2>&1
+            local build_status=$?
+            
+            if [ $build_status -eq 0 ]; then
                 echo "✅"
                 ((built_count++))
             else
                 echo "❌"
-                failed=true
+                ((failed_count++))
+                # Extract just the error lines
+                local error_lines=$(grep -E 'error [A-Za-z0-9]+:|Build FAILED\.$' "$temp_file")
+                if [ -n "$error_lines" ]; then
+                    build_errors+=("$project_name failed:")
+                    while IFS= read -r error_line; do
+                        build_errors+=("  $error_line")
+                    done <<< "$error_lines"
+                    build_errors+=("")
+                fi
             fi
         fi
     done <<< "$all_projects"
 
+    rm -f "$temp_file"
     local end_time=$(date +%s.%N)
     local elapsed_time=$(echo "$end_time - $start_time" | bc)
 
-    if [ "$failed" = true ]; then
-        echo "Build failed for some projects."
+    # Display errors if any
+    if [ ${#build_errors[@]} -ne 0 ]; then
+        echo ""
+        echo "Build errors:"
+        printf '%s\n' "${build_errors[@]}"
+    fi
+
+    if [ $failed_count -gt 0 ]; then
+        echo "❌ Build failed for $failed_count project(s)."
         return 1
     fi
 

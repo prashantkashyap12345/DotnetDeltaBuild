@@ -21,7 +21,7 @@ source ~/.bashrc
 
 #### **Zsh**
 ```bash
-curl -o ~/.dotnet_delta_build.bash https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
+curl -o ~/.dotnet_delta_build.zsh https://github.com/prashantkashyap12345/DotnetDeltaBuild/blob/main/dotnet_delta_build.zsh &&
 echo "\nsource ~/.dotnet_delta_build.zsh" >> ~/.zshrc &&
 source ~/.zshrc
 ```
